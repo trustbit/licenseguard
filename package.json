@@ -1,0 +1,32 @@
+{
+  "name": "license-test",
+  "version": "1.0.0",
+  "description": "Command line tool for running license checks like tests",
+  "author": "Softwarepark <office@softwarepark.cc>",
+  "license": "ISC",
+  "main": "index.js",
+  "bin": "bin/cli.js",
+  "scripts": {
+    "test": "nyc mocha --recursive",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "files": ["index.js", "bin/**/*.js", "lib/**/*.js"],
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.15.0",
+    "mocha": "^4.1.0",
+    "nyc": "^11.4.1"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "license-checker": "^15.0.0",
+    "mocha-junit-reporter": "^1.15.0",
+    "rc": "^1.2.3",
+    "spdx-expression-parse": "^2.0.2",
+    "spdx-license-ids": "^2.0.1",
+    "spdx-satisfies": "^0.1.3",
+    "wrap-ansi": "^3.0.1",
+    "xmlbuilder": "^9.0.4"
+  }
+}
