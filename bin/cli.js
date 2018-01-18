@@ -26,7 +26,8 @@ if (options.help) {
   console.log('  --blacklist <license>     Test that license is not used in any npm dependency');
   console.log('  --ignore <package>        Ignore package <package> and do not check against blacklist');
   console.log('  --path <dirname>          Test "path" for license violations. Defaults to current directory');
-  console.log('  --reporter                Reporter to use. Supported reporters: "text", "junit"');
+  console.log('  --reporter                Reporter to use. Supported reporters: "text", "junit" and "silent" to supress output');
+  console.log('  --nofail                  Exit with error code 0 even if blacklisted licenses were found');
   console.log('  --licenses                Print a list of valid license names that can be used in blacklist');
   console.log('  --help                    Print help');
   console.log();
@@ -48,7 +49,7 @@ if (options.licenses) {
   console.log('    ' + wrapAnsi(licenseIds.join(chalk.gray(', ')), 80).split('\n').join('\n    '));
   console.log();
 
-  process.exit(0);
+  exit(0);
 }
 
 const runner = new Runner(options);
@@ -58,13 +59,21 @@ runner
   .execute(reporter)
   .then(tests => {
     if (tests.filter(test => test.result == 'fail')) {
-      process.exit(1);
+      exit(1);
     }
   })
   .catch(e => {
-    console.log();
-    console.log(`  License test failed due to a runtime exception "${chalk.red(e.message)}"`);
-    console.log(`    ${chalk.gray(e.stack)}`);
+    console.error();
+    console.error(`  License test failed due to a runtime exception "${chalk.red(e.message)}"`);
+    console.error(`    ${chalk.gray(e.stack)}`);
 
-    process.exit(2);
+    exit(2);
   });
+
+function exit(code) {
+  if (options.nofail) {
+    process.exit(0);
+  }
+
+  process.exit(code);
+}
