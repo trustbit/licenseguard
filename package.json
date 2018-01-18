@@ -11,7 +11,11 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "files": ["index.js", "bin/**/*.js", "lib/**/*.js"],
+  "files": [
+    "index.js",
+    "bin/**/*.js",
+    "lib/**/*.js"
+  ],
   "devDependencies": {
     "chai": "^4.1.2",
     "eslint": "^4.15.0",
@@ -21,6 +25,7 @@
   "dependencies": {
     "chalk": "^2.3.0",
     "license-checker": "^15.0.0",
+    "matcher": "^1.0.0",
     "mocha-junit-reporter": "^1.15.0",
     "rc": "^1.2.3",
     "spdx-expression-parse": "^2.0.2",

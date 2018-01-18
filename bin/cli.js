@@ -24,8 +24,8 @@ if (options.help) {
   console.log('  --production              Test only production dependencies');
   console.log('  --development             Test only development dependencies');
   console.log('  --blacklist <license>     Test that license is not used in any npm dependency');
-  console.log('  --ignore <package>        Ignore package <package> and do not check against blacklist');
-  console.log('  --path <dirname>          Test "path" for license violations. Defaults to current directory');
+  console.log('  --ignore <package>        Ignore package matching <package> allows star patterns');
+  console.log('  --path <path>             Test "path" for license violations. Defaults to current directory');
   console.log('  --reporter                Reporter to use. Supported reporters: "text", "junit" and "silent" to supress output');
   console.log('  --nofail                  Exit with error code 0 even if blacklisted licenses were found');
   console.log('  --licenses                Print a list of valid license names that can be used in blacklist');
