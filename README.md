@@ -17,9 +17,10 @@ Options:
   --production              Test only production dependencies
   --development             Test only development dependencies
   --blacklist <license>     Test that license is not used in any npm dependency
-  --ignore <package>        Ignore package <package> and do not check against blacklist
-  --path <dirname>          Test "path" for license violations. Defaults to current directory
-  --reporter                Reporter to use. Supported reporters: "text", "junit"
+  --ignore <package>        Ignore package matching <package> allows star patterns
+  --path <path>             Test "path" for license violations. Defaults to current directory
+  --reporter                Reporter to use. Supported reporters: "text", "junit" and "silent" to supress output
+  --nofail                  Exit with error code 0 even if blacklisted licenses were found
   --licenses                Print a list of valid license names that can be used in blacklist
   --help                    Print help
 
