@@ -52,14 +52,14 @@ You can print a list of valid SPDX license ids `license-test --licenses`
 
 ## Integration with Jenkins
 
-license-test comes with an integrated JUnit reporter. You will need to install [JUnit Plugin][https://wiki.jenkins.io/display/JENKINS/JUnit+Plugin].
+license-test comes with an integrated JUnit reporter. You will need to install [JUnit Plugin](https://wiki.jenkins.io/display/JENKINS/JUnit+Plugin).
 
 *Add a build step*
 
 Add a "Execute Windows batch command" or "Execute shell" build step and configure the command like this to use the `junit` reporter and pipe the output to a file.
 
 ```bash
-node bin\cli.js --reporter junit > license-test-results.xml
+license-test --reporter junit > license-test-results.xml
 ```
 
 *Add a post build action*
@@ -68,7 +68,7 @@ Add a "Publish JUnit test result report" post build action and specify a file pa
 
 After you run a build you should see something like this in jenkins project
 
-![Test Result Trend](https://github.com/username/repository/blob/master/img/jenkins-test-overview.png)
+![Test Result Trend](https://github.com/Softwarepark/license-test/blob/master/assets/jenkins-test-overview.png)
 
-![Test Result](https://github.com/username/repository/blob/master/img/jenkins-test-detail.png)
+![Test Result](https://github.com/Softwarepark/license-test/blob/master/assets/jenkins-test-detail.png)
 
