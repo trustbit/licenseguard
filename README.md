@@ -1,6 +1,7 @@
-# License Test
+# License Guard
 
-Test runner built on [license-checker](https://www.npmjs.com/package/license-checker) to test licenses of npm dependencies against blacklists.
+Command line tool for running license checks to guard you from using packages with blacklisted licenses. Integrates well into your ci workflow.
+Uses [license-checker](https://www.npmjs.com/package/license-checker) under the hood.
 
 ## Install
 
