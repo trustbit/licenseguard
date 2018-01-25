@@ -9,7 +9,7 @@ const wrapAnsi = require('wrap-ansi');
 
 licenseIds.sort();
 
-const options = rc('licensetest', {
+const options = rc('licenseguard', {
   blacklist: [],
   ignore: [],
   production: false,
@@ -18,7 +18,7 @@ const options = rc('licensetest', {
 });
 
 if (options.help) {
-  console.log('Usage: license-test [options]');
+  console.log('Usage: licenseguard [options]');
   console.log();
   console.log('Options:');
   console.log('  --production              Test only production dependencies');
@@ -33,10 +33,10 @@ if (options.help) {
   console.log();
   console.log('Examples:');
   console.log();
-  console.log('  Test that no "beerware license" dependency was used            $ license-test --blacklist Beerware');
-  console.log('  List of blacklisted licenses                                   $ license-test --blacklist beerware --blacklist AGPL-3.0');
-  console.log('  Ignore a dependency                                            $ license-test --ignore yargs@10.0.3');
-  console.log('  Ignore multiple dependencies                                   $ license-test --ignore yargs@10.0.3 --ignore doctrine@2.1.0');
+  console.log('  Test that no "beerware license" dependency was used            $ licenseguard --blacklist Beerware');
+  console.log('  List of blacklisted licenses                                   $ licenseguard --blacklist beerware --blacklist AGPL-3.0');
+  console.log('  Ignore a dependency                                            $ licenseguard --ignore yargs@10.0.3');
+  console.log('  Ignore multiple dependencies                                   $ licenseguard --ignore yargs@10.0.3 --ignore doctrine@2.1.0');
   console.log();
 
   process.exit(0);

@@ -1,9 +1,10 @@
 {
-  "name": "license-test",
+  "name": "licenseguard",
   "version": "1.0.0",
-  "description": "Command line tool for running license checks like tests",
+  "description": "Command line tool for running license checks to guard you from using packages with blacklisted licenses. Integrates well into your ci workflow.",
   "author": "Softwarepark <office@softwarepark.cc>",
   "license": "ISC",
+  "repository": "Softwarepark/licenseguard",
   "main": "index.js",
   "bin": "bin/cli.js",
   "scripts": {
