@@ -5,6 +5,8 @@ Uses [license-checker](https://www.npmjs.com/package/license-checker) under the 
 
 [![Build Status](https://travis-ci.org/Softwarepark/licenseguard.svg?branch=master)](https://travis-ci.org/Softwarepark/licenseguard)
 
+[![Coverage Status](https://coveralls.io/repos/github/Softwarepark/licenseguard/badge.svg?branch=master)](https://coveralls.io/github/Softwarepark/licenseguard?branch=master)
+
 ## Install
 
 ```bash
