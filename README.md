@@ -3,6 +3,8 @@
 Command line tool for running license checks to guard you from using packages with blacklisted licenses. Integrates well into your ci workflow.
 Uses [license-checker](https://www.npmjs.com/package/license-checker) under the hood.
 
+[![Build Status](https://travis-ci.org/Softwarepark/licenseguard.svg?branch=master)](https://travis-ci.org/Softwarepark/licenseguard)
+
 ## Install
 
 ```bash
