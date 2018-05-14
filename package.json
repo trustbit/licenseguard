@@ -1,6 +1,6 @@
 {
   "name": "licenseguard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Command line tool for running license checks to guard you from using packages with blacklisted licenses. Integrates well into your ci workflow.",
   "author": "Softwarepark <office@softwarepark.cc>",
   "license": "ISC",
@@ -11,7 +11,8 @@
     "test": "nyc mocha --recursive",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "release": "standard-version"
   },
   "files": [
     "index.js",
@@ -23,7 +24,8 @@
     "coveralls": "^3.0.1",
     "eslint": "^4.19.1",
     "mocha": "^4.1.0",
-    "nyc": "^11.7.3"
+    "nyc": "^11.7.3",
+    "standard-version": "^4.3.0"
   },
   "dependencies": {
     "chalk": "^2.3.0",
