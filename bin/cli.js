@@ -58,7 +58,7 @@ const reporter = reporters.create(options.reporter, options);
 runner
   .execute(reporter)
   .then(tests => {
-    if (tests.filter(test => test.result == 'fail')) {
+    if (tests.filter(test => test.result == 'fail').length > 0) {
       exit(1);
     }
   })
