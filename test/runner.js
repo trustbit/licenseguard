@@ -3,7 +3,9 @@ const reporters = require('../lib/reporters');
 const log = require('../lib/reporters/log');
 const { expect } = require('chai');
 
-describe('runner', () => {
+describe('runner', function() {
+  this.timeout(5000); // increase timeout since we're reading the package tree
+
   let result = '';
 
   beforeEach(() => {
@@ -82,4 +84,5 @@ describe('runner', () => {
       new Runner({ blacklist: 'MITTAG' });
     }).to.throw('Licenses "MITTAG" were not specified in a valid SDPX format');
   });
-});
+})
+.timeout(5000); // increase timeout since we're analzying the package tree here
