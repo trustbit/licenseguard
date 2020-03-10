@@ -1,6 +1,6 @@
 {
   "name": "licenseguard",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Command line tool for running license checks to guard you from using packages with blacklisted licenses. Integrates well into your ci workflow.",
   "author": "Softwarepark <office@softwarepark.cc>",
   "license": "ISC",
